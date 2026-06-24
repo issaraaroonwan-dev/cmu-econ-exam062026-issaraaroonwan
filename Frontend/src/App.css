@@ -1,0 +1,153 @@
+.app-shell {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 48px 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.lead {
+  max-width: 600px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content-grid {
+  padding-top: 24px;
+}
+
+/* Glassmorphism Cards */
+.user-form,
+.users-panel {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-form:hover,
+.users-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: start;
+}
+
+/* Update React Bootstrap overrides inside App.css */
+.card {
+  background: transparent !important;
+  border: none !important;
+}
+
+.card-header {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.list-group-item {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-bottom: 1px solid var(--border) !important;
+  transition: all 0.2s ease;
+  padding: 16px 8px !important;
+  border-radius: 8px !important;
+  margin-bottom: 4px;
+}
+
+.list-group-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--border) !important;
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: var(--accent) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4) !important;
+}
+
+.btn-outline-secondary {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.form-control {
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  border: 1px solid var(--border) !important;
+  background: var(--bg) !important;
+  color: var(--text-h) !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 4px var(--accent-bg) !important;
+}
+
+.avatar {
+  display: grid;
+  width: 48px !important;
+  height: 48px !important;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%) !important;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 760px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
